@@ -28,4 +28,5 @@ SELECT name, age FROM student;
 
 -- to delete the data from table
 -- DELETE FROM table_name
+
 DELETE FROM student;
