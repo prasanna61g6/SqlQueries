@@ -1,0 +1,27 @@
+-- DATE type in SQL
+CREATE TABLE student(
+    s_id NUMBER,
+    name VARCHAR2(50),
+    doj DATE
+);
+INSERT INTO student VALUES(1, 'Alice', DATE '2017-07-12'); -- YYYY-MM-DD
+INSERT INTO student VALUES(
+    2, 'Bob', TO_DATE('01-01-2023 19:50:42', 'DD-MM-YYYY HH24:MI:SS'));
+INSERT INTO student VALUES(3, 'Charlie', 
+    TO_DATE('07-12-2024 01:23:58 PM', 'DD-MM-YYYY HH12:MI:SS AM'));
+-- TO_DATE() function in Oracle
+-- TO_DATE(date (with time), mask)
+-- DD-MM-YYYY
+-- MM-DD-YYYY
+-- Masks for time: DD-MM-YYYY HH12:MI:SS AM
+-- Mask for time: DD-MM-YYYY HH24:MI:SS
+
+SELECT * FROM student;
+-- Integrity Constraints
+
+-- Display the date in any format -> TO_CHAR()
+-- Inserting the date in any format (with time)
+-- -> TO_DATE('date', 'mask')
+-- DD-MM-YYYY, MM-DD-YYYY, YYYY-DD-MM
+-- 12 hour: HH12:MI:SS AM
+-- 24 hour: HH24:MI:SS
